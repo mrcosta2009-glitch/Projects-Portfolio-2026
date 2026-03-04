@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moisés | Research Lab 12A2</title>
+    <meta name="description"
+        content="Science-themed research portfolio showcasing Python algorithms by Moisés, student of 12A2.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="container">
+        <!-- Profile Header -->
+        <header>
+            <div class="profile-card glass">
+                <div class="edit-overlay">
+                    <button id="toggle-edit" class="btn-edit">Edit Profile</button>
+                    <button id="save-profile" class="btn-edit" style="display: none;">Save Changes</button>
+                </div>
+
+                <div class="avatar-container">
+                    <img src="science_avatar_png_1772554697798.png" alt="Profile Photo" id="profile-img" class="avatar">
+                </div>
+
+                <div class="profile-info">
+                    <h1 id="user-name" contenteditable="false">Moisés</h1>
+                    <div class="grade">Lead Researcher • <span id="user-grade" contenteditable="false">Grade 12A2</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Exercises Section -->
+        <section id="exercises">
+            <h2 class="section-title">Experimental Data</h2>
+            <div class="exercise-grid">
+                <!-- Fibonacci Card -->
+                <div class="card glass" onclick="showTool('fibonacci')">
+                    <div class="card-icon">🌀</div>
+                    <h3>Fibonacci Generator</h3>
+                    <p>An interactive tool to generate the Fibonacci sequence based on human or mathematical limits.
+                        Uses logic implemented in Python.</p>
+                    <div class="card-footer">
+                        <span class="tag">#Algorithm</span>
+                        <span class="tag">#Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Placeholder Cards for future usage -->
+                <div class="card glass">
+                    <div class="card-icon">🧪</div>
+                    <h3>Molecular Analyzer</h3>
+                    <p>Computational models for atomic structures and chemical reactions. (In Lab)</p>
+                    <div class="card-footer">
+                        <span class="tag">#Simulation</span>
+                    </div>
+                </div>
+
+                <div class="card glass">
+                    <div class="card-icon">🔭</div>
+                    <h3>Celestial Body Tracker</h3>
+                    <p>Predicting movements of stars and planets using Python physics engines. (In Lab)</p>
+                    <div class="card-footer">
+                        <span class="tag">#Physics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tool Implementation Section -->
+        <section id="tool-view" class="tool-section">
+            <div class="tool-container glass">
+                <div class="tool-controls">
+                    <h3>Sequence Analysis Module</h3>
+                    <div class="input-group">
+                        <label for="fib-input">Enter input variable (n):</label>
+                        <input type="number" id="fib-input" placeholder="e.g. 10" min="1" max="1000">
+                    </div>
+                    <button class="btn-primary" onclick="generateFibonacci()">Execute Calculation</button>
+
+                    <div class="result-area" id="fib-result">
+                        Sequence will appear here...
+                    </div>
+                </div>
+
+                <div class="code-display">
+                    <div class="code-header">
+                        <span>fibonacci.py</span>
+                        <span>Python 3.x</span>
+                    </div>
+                    <pre><code id="source-code"># Fibonacci Source Loading...</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
